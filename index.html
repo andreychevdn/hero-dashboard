@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- meta charset="UTF-8" — это переводчик для браузера. Она гарантирует, -->
+    <!-- что наши иконки-эмодзи и русский текст отобразятся правильно -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровой Дашборд Киберлиги</title>
+    <!-- Указываем правильный путь в папку css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <!-- 👾 Это эмодзи! Обычный печатный текстовый символ (как буква) из стандарта Юникод. -->
+        <!-- Его можно легко скопировать или вставить на Windows через (Win + .) или на Mac через (Cmd + Ctrl + Пробел) -->
+        <h1>👾 База Данных Персонажей</h1>
+        <div class="control-panel">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск героя по имени...">
+            </div>
+            <div class="sort-box">
+                <select id="levelSort">
+                    <option value="default">Сортировка: По умолчанию</option>
+                    <option value="asc">Уровень: Сначала слабые</option>
+                    <option value="desc">Уровень: Сначала сильные (Топ)</option>
+                </select>
+            </div>
+            <div class="filter-panel">
+                <button class="filter-btn active">Все</button>
+                <button class="filter-btn">Орки</button>
+                <button class="filter-btn">Эльфы</button>
+                <button class="filter-btn">Роботы</button>
+            </div>
+        </div>
+        <!-- Сетка для карточек -->
+        <div class="heroes-grid" id="heroesContainer">
+            <!-- Сюда JavaScript будет динамически добавлять наших героев -->
+        </div>
+    </div>
+
+    <!-- Подключаем JS в самом низу страницы через атрибут src (Source — источник), -->
+    <!-- чтобы код запустился только тогда, когда весь HTML уже построился! -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
